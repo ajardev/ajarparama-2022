@@ -11,17 +11,17 @@ const Header = ({ titleLink }) => {
                 <ul className="flex flex-row">
                     <li>
                         <Link to="/" className="block py-2 pr-4 pl-3">
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/about" className="block py-2 pr-4 pl-3">
                             About
                         </Link>
                     </li>
                     <li>
                         <Link to="/blog" className="block py-2 pr-4 pl-3">
                             Blog
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/projects" className="block py-2 pr-4 pl-3">
+                            Projects
                         </Link>
                     </li>
                 </ul>
