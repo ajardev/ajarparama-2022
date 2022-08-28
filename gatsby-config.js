@@ -3,5 +3,7 @@ module.exports = {
     title: `Ajar Parama`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    'gatsby-plugin-postcss',
+  ],
 }
