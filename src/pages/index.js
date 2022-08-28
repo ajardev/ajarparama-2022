@@ -11,8 +11,8 @@ const IndexPage = () => {
   )
 };
 
+export default IndexPage;
+
 export const Head = () => (
   <Seo />
 )
-
-export default IndexPage;
