@@ -1,49 +1,37 @@
-import * as React from "react"
-import { Link } from "gatsby"
-
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import React from 'react';
+import { Link } from 'gatsby';
+import Seo from '../components/Seo';
+import Layout from '../components/Layout';
 
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout>
+      <div className="flex flex-col items-start justify-start">
+        <div className="space-x-2 pt-6 pb-8">
+          <h1 className="text-6xl font-extrabold leading-9 tracking-tight text-gray-900">
+            404
+          </h1>
+        </div>
+        <div className="max-w-md">
+          <p className="mb-4 text-xl font-bold leading-normal">
+            Sorry we couldn't find this page.
+          </p>
+          <p className="mb-8">
+            But dont worry, you can find plenty of other things on our homepage.
+          </p>
+          <Link href="/">
+            <button className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-blue-700 focus:outline-none">
+              Back to homepage
+            </button>
+          </Link>
+        </div>
+      </div>
+    </Layout>
   )
-}
+};
 
-export default NotFoundPage
+export default NotFoundPage;
 
-export const Head = () => <title>Not found</title>
+export const Head = () => (
+  <Seo title="Not Found"/>
+);
