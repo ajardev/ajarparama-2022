@@ -15,7 +15,6 @@ const Seo = ({ title, description, image, pathname, children }) => {
     return (
         <>
             <title>{seo.title}</title>
-            <html lang="id" />
 
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
